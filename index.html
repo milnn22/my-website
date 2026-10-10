@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mil0 AI | Smart Customer Support</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b14;
+      color: white;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      border-bottom: 1px solid #202536;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #8b9cff;
+    }
+
+    nav a {
+      color: #c6cada;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 80px 8%;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #a9b4ff;
+      border: 1px solid #414c80;
+      background: #141a30;
+      padding: 7px 14px;
+      border-radius: 25px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #8b9cff;
+    }
+
+    .hero-text p {
+      color: #aeb5c8;
+      max-width: 520px;
+      margin-bottom: 28px;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #7587ff;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #596cf0;
+    }
+
+    .demo {
+      flex: 1;
+      min-width: 280px;
+      max-width: 430px;
+      background: #111625;
+      border: 1px solid #29314a;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 0 70px #4d5fff15;
+    }
+
+    .demo h2 {
+      margin-bottom: 5px;
+    }
+
+    .status {
+      color: #65e6a0;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      padding: 12px 15px;
+      margin: 12px 0;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .bot {
+      background: #222b42;
+      color: #e0e5f6;
+    }
+
+    .user {
+      background: #515fbe;
+      margin-left: 35px;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    input {
+      width: 100%;
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid #333c55;
+      background: #080d19;
+      color: white;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .features {
+      padding: 65px 8%;
+      background: #0d1120;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #aeb5c8;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+
+    .card {
+      padding: 25px;
+      background: #141a2b;
+      border: 1px solid #252e45;
+      border-radius: 14px;
+    }
+
+    .card h3 {
+      margin: 12px 0;
+    }
+
+    .card p {
+      color: #aeb5c8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8d96ac;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">✦ Gayrag AI</div>
+    <div>
+      <a href="#features">Features</a>
+      <a href="#demo">Try Demo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <span class="tag">✦ The future of customer support</span>
+
+      <h1>Support that<br>
+      <span>never sleeps.</span></h1>
+
+      <p>
+        Meet your Nightime bed assistant
+        Answer customer questions, save time, and help
+        your business grow — 24/7.
+      </p>
+
+      <a href="#demo" class="btn">Try the AI Demo →</a>
+    </div>
+
+    <div class="demo" id="demo">
+      <h2>✦ Gayrag Assistant</h2>
+      <div class="status">● Demo is online</div>
+
+      <div id="chat">
+        <div class="message bot">
+          Hey there! 👋 Welcome to gayrags website bro
+          LETS HAVE FUN 
+        </div>
+      </div>
+
+      <form class="chat-input" id="chatForm">
+        <input
+          id="userInput"
+          placeholder="Ask me a question..."
+          autocomplete="off"
+          required
+        >
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Built for growing businesses.</h2>
+    <p class="subtitle">
+      Less repetitive work. Better customer experiences.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div style="font-size:30px">⚡</div>
+        <h3>Instant Replies</h3>
+        <p>Give customers quick answers instead of making them wait.</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px">🌙</div>
+        <h3>Available 24/7</h3>
+        <p>Help customers even when your team is offline.</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px">📈</div>
+        <h3>Grow Your Business</h3>
+        <p>Free your team to focus on important customer problems.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Mil0 AI. Built for better customer experiences.
+  </footer>
+
+  <script>
+const form = document.getElementById("chatForm");
+const input = document.getElementById("userInput");
+const chat = document.getElementById("chat");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const question = input.value.trim();
+  if (!question) return;
+
+  addMessage(question, "user");
+  input.value = "";
+
+  const loading = addMessage("Thinking...", "bot");
+  const button = form.querySelector("button");
+  button.disabled = true;
+
+  try {
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message: question })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Request failed");
+    }
+
+    loading.textContent = data.reply;
+  } catch (error) {
+    loading.textContent =
+      "Couldn't connect to AI. Check your API key and server.";
+    console.error(error);
+  } finally {
+    button.disabled = false;
+  }
+});
+
+function addMessage(text, type) {
+  const message = document.createElement("div");
+  message.className = "message " + type;
+  message.textContent = text;
+  chat.appendChild(message);
+  chat.scrollTop = chat.scrollHeight;
+  return message;
+}</script>
+
+</body>
+</html>
